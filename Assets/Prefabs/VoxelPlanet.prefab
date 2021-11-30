@@ -1,0 +1,178 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &180826572352461658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 180826572352461636}
+  - component: {fileID: 180826572352461633}
+  - component: {fileID: 180826572352461637}
+  - component: {fileID: 180826572352461632}
+  - component: {fileID: 180826572352461645}
+  - component: {fileID: 180826572352461639}
+  - component: {fileID: 1098891548874345202}
+  m_Layer: 0
+  m_Name: VoxelPlanet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &180826572352461636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180826572352461658}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &180826572352461633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180826572352461658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 087a2dba5567c8849b801d0203692745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  maxWorldSize: 4096
+  chunkResolution: 32
+  maxDepth: 12
+  drawSeamVoxels: 0
+  seamAxis:
+    x: 1
+    y: 0
+    z: 1
+  pauseOnModification: 0
+  pauseOnUpdate: 0
+--- !u!114 &180826572352461637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180826572352461658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75eaf3bacf84f9a4fb19b8dcd5f2f597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &180826572352461632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180826572352461658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4edbcf3094324414dafca011c2f3c883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &180826572352461645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180826572352461658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 268a001adbad3b045bf8d3630df9e0e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LODFactor: 1
+  createCollisionMeshes: 1
+  meshChunkPool: {fileID: 180826572352461639}
+--- !u!114 &180826572352461639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180826572352461658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea33dbf9602875042b91c37e38f88524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshChunkPrefab: {fileID: 6600248304996087167, guid: b1a4784d0031e6241abf26e7bd08688e, type: 3}
+  maxCapacity: 1000
+  meshChunkPool: []
+--- !u!114 &1098891548874345202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180826572352461658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0b99d15c6aaf546baaaded616bb381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetSurfaceSDF:
+    fieldType: 2
+    noiseSettings:
+      type: 0
+      frequency: 0.01
+      amplitude: 150
+      octaveCount: 2
+    sphereSettings:
+      radius: 1500
+      minRadius: 1300
+      center:
+        x: 0
+        y: 0
+        z: 0
+  cavesSDF:
+    fieldType: 0
+    noiseSettings:
+      type: 0
+      frequency: 0.009
+      amplitude: 1
+      octaveCount: 0
+    sphereSettings:
+      radius: 0
+      minRadius: 0
+      center:
+        x: 0
+        y: 0
+        z: 0
+  biomeMaterialsSDF:
+    fieldType: 0
+    noiseSettings:
+      type: 0
+      frequency: 0.005
+      amplitude: 1
+      octaveCount: 0
+    sphereSettings:
+      radius: 0
+      minRadius: 0
+      center:
+        x: 0
+        y: 0
+        z: 0
+  planetSurfaceIsovalue: 0
+  cavesIsovalue: 0.41
+  biomeMaterialsData:
+  - isovalue: 1
+    voxelMat: {fileID: 11400000, guid: e18a8741ef12f7d4389720337c29c34f, type: 2}
+  - isovalue: 0.6
+    voxelMat: {fileID: 11400000, guid: 2399f6af0f3cb7e429c340ebfe46e4df, type: 2}
+  - isovalue: 0.3
+    voxelMat: {fileID: 11400000, guid: 934f94bb9e99f6c41b4e5b2ed6f1d7f8, type: 2}

@@ -1,0 +1,10 @@
+#pragma kernel TestKernel
+
+RWStructuredBuffer<float> floats;
+
+[numthreads(64,1,1)]
+void TestKernel (uint3 id : SV_DispatchThreadID)
+{
+    // TODO: insert actual code here!
+    floats[id.x] = id.x;
+}

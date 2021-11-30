@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: ea33dbf9602875042b91c37e38f88524
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - meshChunkPrefab: {fileID: 6600248304996087167, guid: 8be6e4020dd929d48ae97d2ea0460434, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
